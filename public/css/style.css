@@ -1,0 +1,40 @@
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff !important;
+}
+.navbar-dark .navbar-nav .nav-link a:hover {
+	color: rgb(140, 79, 79);
+}
+
+.btn-outline-light {
+	color: #fff;
+	background-color: red;
+	border-color: white;
+}
+
+header.masthead {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - 72px);
+	background: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(rgba(92, 77, 66, 0.4)),
+			to(rgba(92, 77, 66, 0.2))
+		),
+		url("/img/bg.jpeg");
+	background: linear-gradient(
+			to bottom,
+			rgba(92, 77, 66, 0.8) 0%,
+			rgba(92, 77, 66, 0.8) 100%
+		),
+		url("/img/bg.jpeg");
+	background-position: 25% 35%;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+.btn-primary {
+	background-color: rgb(3, 2, 2);
+	border-color: #fff;
+}

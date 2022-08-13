@@ -1,12 +1,195 @@
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<h1>linking ejs file</h1>
-	</body>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PASSWORD MANAGER</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&selection.subset=cyrillic"
+    rel="stylesheet">
+  <link
+    href='https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i&display=swap&subset=cyrillic'
+    rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <%- include ('./partials/head.ejs') %>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      </a>
+      <button class=" navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-warning" href="#benefits">BENEFITS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">SIGN UP</a>
+			
+
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#login">LOG IN</a>
+			
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead" id="home">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold" style="font-family: sans-serif;">PASSWORD MANAGER</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white font-weight-bold" style="font-family: serif;">
+            PROTECT<BR>
+            RELAX<BR>
+            ENJOY<BR>
+          </p>
+          <a class="btn btn-primary  btn-xl js-scroll-trigger" href="#signup">SIGN UP</a>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class=" page-section bg-dark" id="services">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-white mt-0">SERVICES</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4">
+
+            PROTECTING YOUR PASSWORD<i class="fa-solid fa-user"></i>
+            <br><br>
+            MANAGE YOUR PASSWORD IN DASHBOARD<br><br>
+           SHARE YOUR PASSWORD WITH ANOTHER USER<br><br>
+           STORE YOUR CARD INFORMATION<br><br>
+           ONE MASTER PASSWORD <br><br>
+         ALERTS OF UNSECURED PASSWORD<br><br></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page-section" id="benifits">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="mt-0">BOOK ONLINE</h1>
+          <hr class="divider my-4">
+          <form action="https://formsubmit.co/info@fari-makeup.com" method="POST">
+            <div class="form">
+
+              <h2 class="secondText">I WILL CONTACT YOU SHORTLY!</h2>
+              <div class="formInput">
+                <span><i class="fas fa-user"></i></span>
+                <input type="text" placeholder="Your name" name="name" style="border-radius: 15px; height: 40px;"
+                  required>
+              </div>
+              <p></p>
+              <div class="formInput">
+                <span><i class="fas fa-phone-alt"></i></span>
+                <input type="number" placeholder="Your phone number" name="phone"
+                  style="border-radius: 15px; height: 40px;" required>
+              </div>
+              <p></p>
+              <div class="formInput">
+                <span><i class="fas fa-envelope"></i></span>
+                <input type="email" placeholder="Email" size="29" name="email"
+                  style="border-radius: 15px; height: 40px;" required>
+              </div>
+              <p></p>
+              <div class="formInput">
+                <span><i class="fas fa-calendar-alt"></i></span>
+                <input type="date" placeholder="Date of event" name="date" style="border-radius: 15px; height: 40px;"
+                  required>
+              </div>
+              <p></p>
+              <input class="btn btn-primary btn-xl js-scroll-trigger" type="submit" class="send" value="SEND">
+            </div>
+          </form>
+        </DIv>
+      </div>
+    </div>
+    <div class="row">
+
+    </div>
+    </div>
+    </div>
+  </section>
+  <section class="page-section" id="book">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Contact me</h2>
+          <hr class="divider my-4">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+          <div>+1 (619)399-6160</div>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+          <!-- Make sure to change the email address in anchor text AND the link below! -->
+          <a class="d-block" href="sms://+16193996160" ?body=Can%20I%20Make%20an%20Apoinment.">Send SMS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2021- Fari MakeUp<br />Copyright ©
+        FARI_MAKEUP</div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
