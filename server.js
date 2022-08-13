@@ -54,6 +54,14 @@ app.get("/", (req, res) => {
 app.get("/dashboard", (req, res) => {
 	res.render("dashboard.ejs");
 });
+
+
+app.delete("/cost/:id", (req, res) => {
+	dailyExpense.findByIdAndRemove(req.params.id, (err, data) => {
+		res.redirect("/cost");
+	});
+});
+
 //___________________
 //Listener
 //___________________
