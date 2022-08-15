@@ -1,8 +1,8 @@
 module.exports = [
 	{
 		url: "https://github.com/",
-		username: "username",
-		password: "password",
-		Image: "path/to/image.png",
+		username: "usernametest",
+		password: "password123",
+		image: "path/to/image.png",
 	},
 ];

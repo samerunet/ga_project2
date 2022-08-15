@@ -96,20 +96,29 @@
 		</header>
 		<main class="pt-5 max-lg-5">
 			<div class="row row-cols-1 row-cols-md-2 g-4">
-				<% for(let i = 0; i < 50; i++) { %>
+				<%for(let i = 0; i < schema.length; i++) {%>
 
 				<div class="col">
 					<div class="card m-3">
-						<img src="..." class="card-img-top" alt="..." />
+						<!-- <img src="..." class="card-img-top" alt="..." /> -->
 						<div class="card-body">
 							<div class="form-floating mb-3">
 								<input
 									type="text"
 									class="form-control"
 									id="floatingInput"
-									placeholder="username"
+									placeholder=" "
 								/>
-								<label for="floatingInput">Email address</label>
+								<label for="floatingInput"><%=schema[i].url%></label>
+							</div>
+							<div class="form-floating mb-3">
+								<input
+									type="text"
+									class="form-control"
+									id="floatingInput"
+									placeholder="<%=schema.username%> "
+								/>
+								<label for="floatingInput"><%=schema[i].username%></label>
 							</div>
 							<div class="form-floating">
 								<input
@@ -118,7 +127,7 @@
 									id="floatingPassword"
 									placeholder="Password"
 								/>
-								<label for="floatingPassword">Password</label>
+								<label for="floatingPassword"><%=schema[i].password%></label>
 							</div>
 							<button type="button" class="btn btn-dark m-2">
 								EDIT PASSWORD / USERNAME
@@ -128,7 +137,7 @@
 					</div>
 				</div>
 
-				<% } %>
+				<%}%>
 			</div>
 		</main>
 	</body>

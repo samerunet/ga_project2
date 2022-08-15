@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
 const modelSchema = new mongoose.Schema({
-	url: { type: String, required: true },
-	username: { type: String, required: true },
-	password: { type: String, required: true },
-	image: { type: String, required: false },
+	url: { type: String },
+	username: { type: String },
+	password: { type: String },
+	image: { type: String },
 });
 
-const passwords = mongoose.model("passwordDB", modelSchema);
+const passwords = mongoose.model("passwordDb", modelSchema);
 
 module.exports = passwords;

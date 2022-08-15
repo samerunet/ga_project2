@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config();
+
+const passwordDb = require("./models/passwordDb.js"); // import data to server
+const schema = require("./models/passwordSchema.js"); // import Schema to server
 //___________________
 //Port
 //___________________
@@ -48,19 +51,30 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 //___________________
 //localhost:3000
 
+// schema.create(passwordDb, (err, data) => {
+// 	console.log("Added password data successfully");
+// });
+
 app.get("/", (req, res) => {
-	res.render("index.ejs");
-});
-app.get("/dashboard", (req, res) => {
-	res.render("dashboard.ejs");
-});
-
-
-app.delete("/cost/:id", (req, res) => {
-	dailyExpense.findByIdAndRemove(req.params.id, (err, data) => {
-		res.redirect("/cost");
+	schema.find({}, (err, data) => {
+		res.render("index.ejs", { schema: data });
 	});
 });
+
+app.get("/dashboard", (req, res) => {
+	schema.find({}, (err, data) => {
+		res.render("dashboard.ejs", { schema: data });
+	});
+});
+// app.get("/dashboard", (req, res) => {
+// 	res.render("dashboard.ejs");
+// });
+
+// app.delete("/cost/:id", (req, res) => {
+// 	dailyExpense.findByIdAndRemove(req.params.id, (err, data) => {
+// 		res.redirect("/cost");
+// 	});
+// });
 
 //___________________
 //Listener
