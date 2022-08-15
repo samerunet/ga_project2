@@ -60,21 +60,30 @@ app.get("/", (req, res) => {
 		res.render("index.ejs", { schema: data });
 	});
 });
-
+app.post("/dashboard", (req, res) => {
+	schema.create(req.body, (error, createdItem) => {
+		res.redirect("/dashboard");
+	});
+});
 app.get("/dashboard", (req, res) => {
 	schema.find({}, (err, data) => {
 		res.render("dashboard.ejs", { schema: data });
 	});
 });
+
+app.get("/dashboard/new", (req, res) => {
+	res.render("dashboardnew.ejs");
+});
+
 // app.get("/dashboard", (req, res) => {
 // 	res.render("dashboard.ejs");
 // });
 
-// app.delete("/cost/:id", (req, res) => {
-// 	dailyExpense.findByIdAndRemove(req.params.id, (err, data) => {
-// 		res.redirect("/cost");
-// 	});
-// });
+app.delete("/dashboard/:id", (req, res) => {
+	schema.findByIdAndRemove(req.params.id, (err, data) => {
+		res.redirect("/dashboard");
+	});
+});
 
 //___________________
 //Listener

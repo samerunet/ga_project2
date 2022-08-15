@@ -1,0 +1,26 @@
+<%- include ('./partials/dashboardnav.ejs') %>
+<main class="pt-5 max-lg-5">
+	<div class="row row-cols-1 row-cols-md-2 g-4">
+		<div class="col">
+			<div class="card m-3">
+				<form action="/dashboard" method="POST">
+					url: <input type="text" name="url" placeholder="new something" />
+					<br />
+
+					username:
+					<input type="text" name="username" placeholder="new something" />
+					<br />
+					password:
+					<input type="password" name="password" placeholder="new 0" />
+					<br />
+					image: <input type="number" name="image" placeholder="new 0" />
+					<br />
+					<input type="submit" value="Create new" />
+					<button type="button" class="btn btn-dark m-2">
+						<a href="/dashboard">GO BACK</a>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>

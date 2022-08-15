@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="/css/style.css"
+			type="text/css"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- MDB -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+			rel="stylesheet"
+		/>
+		<!-- MDB -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"
+		></script>
+		<!-- JavaScript Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body class="bg-warning bg-opacity-50">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="/">PASSWORD MANAGER</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarScroll"
+						aria-controls="navbarScroll"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarScroll">
+						<ul
+							class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+							style="--bs-scroll-height: 100px"
+						>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="/">HOME</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/#benefits">BENEFITS</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									UPDATE
+								</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">URL</a></li>
+									<li><a class="dropdown-item" href="#">USERNAME</a></li>
+									<li><hr class="dropdown-divider" /></li>
+									<li>
+										<a class="dropdown-item" href="#">PASSWORD</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled">Link</a>
+							</li>
+						</ul>
+						<form class="d-flex" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Search"
+								aria-label="Search"
+							/>
+							<button class="btn btn-outline-success" type="submit">
+								Search
+							</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+			<div class="sidebar-fixed position-fixed bg-dark bg-opacity-50">
+				<a href="" class="logo-wrapper waves-effect"
+					><img src="/img/logo.png" alt="picture" class="img-fluid"
+				/></a>
+				<div class="list-group list-group-flush">
+					<a href="/dashboard/new" class="list-group-item waves-effect"
+						><i class="fa fa-plus p-3"></i>ADD ITEM</a
+					>
+					<a href="/dashboard" class="list-group-item active waves-effect"
+						><i class="fa fa-key p-3"></i>PASSWORDS</a
+					>
+					<a href="#" class="list-group-item waves-effect"
+						><i class="fa fa-credit-card p-3"></i>BANK CARDS</a
+					>
+					<a href="#" class="list-group-item waves-effect"
+						><i class="fa fa-share-alt p-3"></i>SHARE ITEM</a
+					>
+					<a href="#" class="list-group-item waves-effect"
+						><i class="fa fa-cog p-3"></i>SETTINGS</a
+					>
+					<a href="#" class="list-group-item waves-effect"
+						><i class="fa fa-question-circle p-3"></i>ISSUES</a
+					>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>

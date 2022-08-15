@@ -1,100 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dashboard</title>
-		<%- include ('./partials/head.ejs') %>
-	</head>
-	<body class="bg-warning bg-opacity-50">
-		<header>
-			<nav class="navbar navbar-expand-lg bg-light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="/">PASSWORD MANAGER</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarScroll"
-						aria-controls="navbarScroll"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarScroll">
-						<ul
-							class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-							style="--bs-scroll-height: 100px"
-						>
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="/">HOME</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/#benefits">BENEFITS</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a
-									class="nav-link dropdown-toggle"
-									href="#"
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-expanded="false"
-								>
-									UPDATE
-								</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">URL</a></li>
-									<li><a class="dropdown-item" href="#">USERNAME</a></li>
-									<li><hr class="dropdown-divider" /></li>
-									<li>
-										<a class="dropdown-item" href="#">PASSWORD</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled">Link</a>
-							</li>
-						</ul>
-						<form class="d-flex" role="search">
-							<input
-								class="form-control me-2"
-								type="search"
-								placeholder="Search"
-								aria-label="Search"
-							/>
-							<button class="btn btn-outline-success" type="submit">
-								Search
-							</button>
-						</form>
-					</div>
-				</div>
-			</nav>
-			<div class="sidebar-fixed position-fixed bg-dark bg-opacity-50">
-				<a href="" class="logo-wrapper waves-effect"
-					><img src="/img/logo.png" alt="picture" class="img-fluid"
-				/></a>
-				<div class="list-group list-group-flush">
-					<a href="#" class="list-group-item active waves-effect"
-						><i class="fa fa-key p-3"></i>PASSWORDS</a
-					>
-					<a href="#" class="list-group-item waves-effect"
-						><i class="fa fa-credit-card p-3"></i>BANK CARDS</a
-					>
-					<a href="#" class="list-group-item waves-effect"
-						><i class="fa fa-share-alt p-3"></i>SHARE ITEM</a
-					>
-					<a href="#" class="list-group-item waves-effect"
-						><i class="fa fa-cog p-3"></i>SETTINGS</a
-					>
-					<a href="#" class="list-group-item waves-effect"
-						><i class="fa fa-question-circle p-3"></i>ISSUES</a
-					>
-				</div>
-			</div>
-		</header>
+<%- include ('./partials/dashboardnav.ejs') %>
 		<main class="pt-5 max-lg-5">
+			
 			<div class="row row-cols-1 row-cols-md-2 g-4">
 				<%for(let i = 0; i < schema.length; i++) {%>
 
@@ -132,7 +38,10 @@
 							<button type="button" class="btn btn-dark m-2">
 								EDIT PASSWORD / USERNAME
 							</button>
-							<button type="button" class="btn btn-dark m-2">DELETE</button>
+							
+                            <form action="/dashboard/<%=schema[i].id%>?_method=DELETE" method="POST">
+                                <input type="submit" value="DELETE" />
+                            </form>
 						</div>
 					</div>
 				</div>
