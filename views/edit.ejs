@@ -1,0 +1,27 @@
+<%- include ('./partials/dashboardnav.ejs') %>
+<main class="pt-5 max-lg-5">
+	<div class="row row-cols-1 row-cols-md-2 g-4">
+		<div class="col">
+			<div class="card m-3">
+				<form action="/dashboard/<%=schema._id%>?_method=PUT" method="POST">
+					url: <input type="text" name="url" value="<%=schema.url%>" />
+					<br />
+
+					username:
+					<input type="text" name="username" value="<%=schema.username%>" />
+					<br />
+					password:
+					<input type="password" name="password" value="<%=schema.password%>" />
+					<br />
+					image:
+					<input type="number" name="image" value="<%=schema.image%>" />
+					<br />
+					<input type="submit" value="SAVE CHANGES" />
+					<button type="button" class="btn btn-dark m-2">
+						<a href="/dashboard">GO BACK</a>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>

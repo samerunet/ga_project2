@@ -35,12 +35,14 @@
 								/>
 								<label for="floatingPassword"><%=schema[i].password%></label>
 							</div>
-							<button type="button" class="btn btn-dark m-2">
-								EDIT PASSWORD / USERNAME
-							</button>
 							
+							<a href="/dashboard/<%=schema[i].id%>/edit"><button type="button" class="btn btn-dark m-2">
+								EDIT PASSWORD / USERNAME
+							</button></a>
                             <form action="/dashboard/<%=schema[i].id%>?_method=DELETE" method="POST">
+                                <label class="btn btn-dark m-2">
                                 <input type="submit" value="DELETE" />
+                            </label>
                             </form>
 						</div>
 					</div>

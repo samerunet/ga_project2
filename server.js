@@ -74,11 +74,26 @@ app.get("/dashboard", (req, res) => {
 app.get("/dashboard/new", (req, res) => {
 	res.render("dashboardnew.ejs");
 });
-
+app.get("/dashboard/:id/edit", (req, res) => {
+	schema.findById(req.params.id, (err, found) => {
+		res.render("edit.ejs", {
+			schema: found,
+		});
+	});
+});
 // app.get("/dashboard", (req, res) => {
 // 	res.render("dashboard.ejs");
 // });
-
+app.put("/dashboard/:id", (req, res) => {
+	schema.findByIdAndUpdate(
+		req.params.id,
+		req.body,
+		{ new: true },
+		(err, updatedModel) => {
+			res.redirect("/dashboard");
+		}
+	);
+});
 app.delete("/dashboard/:id", (req, res) => {
 	schema.findByIdAndRemove(req.params.id, (err, data) => {
 		res.redirect("/dashboard");
