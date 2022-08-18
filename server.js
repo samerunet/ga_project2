@@ -70,7 +70,11 @@ app.get("/dashboard", (req, res) => {
 		res.render("dashboard.ejs", { schema: data });
 	});
 });
-
+app.get("/construction", (req, res) => {
+	schema.find({}, (err, data) => {
+		res.render("construction.ejs", { schema: data });
+	});
+});
 app.get("/dashboard/new", (req, res) => {
 	res.render("dashboardnew.ejs");
 });
@@ -81,9 +85,7 @@ app.get("/dashboard/:id/edit", (req, res) => {
 		});
 	});
 });
-// app.get("/dashboard", (req, res) => {
-// 	res.render("dashboard.ejs");
-// });
+
 app.put("/dashboard/:id", (req, res) => {
 	schema.findByIdAndUpdate(
 		req.params.id,
